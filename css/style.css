@@ -1,0 +1,199 @@
+.g-top .closed:before,.g-header .collect,.g-header .right,.g-header .hasCol,.g-header .nav .last a{
+	background:url("../img/sprite.png") no-repeat -99999px -99999px;
+}
+
+/*  小黄条  */
+.g-top{
+	min-width:1025px;
+	height: 36px;
+	background-color: #f3f3f3;
+}
+
+.g-top .tips{
+	position: relative;
+	font-size: 12px;
+	line-height: 36px;
+	color:#333;
+}
+
+.g-top .looked{
+	color: #21a557;
+	margin-left: 12px;
+}
+
+.g-top .closed{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.g-top .closed:before{
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	content: "";
+	margin-right: 6px;
+	background-position: 0 0 ;
+}
+
+/*  小黄条  END  */
+
+
+
+/*  导航  */
+
+.g-header{
+	height: 89px;
+}
+
+.g-header .logo{
+	margin: 30px 31px 37px 4px;
+	width: 234px;
+	height: 22px;
+}
+
+.g-header .attention{
+	font-family: simsun;
+	font-size: 12px;
+	color: #333;
+}
+
+.g-header .attention{
+	margin: 31px 0 37px;
+}
+
+.g-header .collect{
+	width: 54px;
+	height: 21px;
+	line-height: 21px;
+	margin-right: 14px;
+	background-position: 0 -26px;
+}
+
+.g-header .collect a{
+	padding-left: 22px;
+	color:#fff;
+}
+
+.g-header .collect:hover{
+	background-position: -56px -26px;
+}
+
+.g-header .hasCol{
+	height: 12px;
+	margin-right:14px;
+	padding:3px 6px 4px 6px;
+	background-position: -194px 0;
+}
+
+.g-header .hasCol:hover{
+	background-position: -194px -22px;
+}
+.g-header .right{
+	display: inline-block;
+	width: 11px;
+	height: 9px;
+	padding-right: 5px;
+	background-position: -62px 0;	
+}
+
+.g-header .text{
+	padding-right: 16px;
+}
+
+.g-header .cancel{
+	color: #999;
+}
+
+.g-header .cancel:hover{
+	color: #21a557;
+	text-decoration: underline;
+}
+.g-header .fans{
+	height: 12px;
+	padding: 4px 0px;
+	color: #666;
+}
+
+.g-header .fans span{
+	padding-left: 7px;
+}
+
+.g-header .nav{
+	height: 19px;
+	font-size: 16px;
+	line-height: 19px;
+	margin: 35px 0;
+}
+
+.g-header .nav li{
+	margin-right: 38px;
+}
+
+.g-header .nav .last{
+	margin-right: 14px;
+}
+
+.g-header .nav a{
+	color: #666;
+}
+
+.g-header .nav a:hover{
+	color: #39a030;
+}
+
+.g-header .nav .last a{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-position: -22px 0;
+}
+
+.g-header .nav .last a:hover{
+	background-position: -42px 0;
+}
+
+/*  导航  END  */
+
+/*  banner  */
+.m-banner,.m-banner .pics{
+	width: 1615px;
+	height: 460px;
+	margin: 0 auto;
+}
+
+.m-banner{
+	position: relative;
+}
+
+.m-banner .pics a{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.m-banner .now{
+	z-index: 1;
+}
+
+.m-banner .item{
+	position: absolute;
+	z-index: 2;
+	top: 430px;
+	left: 775px;
+}
+
+.m-banner .item li{
+	float: left;
+	width: 10px;
+	height: 10px;
+	border-radius: 6px;
+	background: #fff;
+	margin-right: 11px;
+	cursor: pointer;
+}
+
+.m-banner .item .cur{
+	background: #000;
+}
+/*  banner  END  */
