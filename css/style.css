@@ -1,4 +1,8 @@
-.g-top .closed:before,.g-header .collect,.g-header .right,.g-header .hasCol,.g-header .nav .last a{
+html,body{
+	height: 100%;
+}
+
+.g-top .closed:before,.g-header .collect,.g-header .right,.g-header .hasCol,.g-header .nav .last a,.g-column .course-gb1,.g-column .course-gb2,.g-column .course-gb3,.g-footer .fore .f-span,.m-closed,.m-logoForm .btn input{
 	background:url("../img/sprite.png") no-repeat -99999px -99999px;
 }
 
@@ -157,7 +161,7 @@
 
 /*  banner  */
 .m-banner,.m-banner .pics{
-	width: 1615px;
+	width: 1616px;
 	height: 460px;
 	margin: 0 auto;
 }
@@ -197,3 +201,345 @@
 	background: #000;
 }
 /*  banner  END  */
+
+
+
+/*  column  */
+.g-column,.g-column .wrap{
+	height: 296px;
+}
+
+.g-column .g-course{
+	float: left;
+	width: 341px;
+	height: 176px;
+	margin:60px 82px 60px 0; 
+}
+
+.g-column .course-gb{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	margin-top: 4px;
+}
+
+.g-column .g-course:first-child{
+	margin-left: 4px;
+}
+
+.g-column .g-course:last-child{
+	margin-right: 0;
+}
+
+.g-column .course-gb1{
+	background-position: 0 -70px;
+}
+
+.g-column .course-gb2{
+	background-position: -92px -70px;
+}
+
+.g-column .course-gb3{
+	background-position: -182px -70px;
+}
+
+.g-column .cont{
+	width: 243px;
+	height: 176px;
+}
+
+.g-column .cont h3{
+	font-size: 22px;
+	color: #333;
+	line-height: 20px;
+	margin-bottom: 18px;
+}
+
+.g-column .cont p{
+	font-size: 14px;
+	color: #666;	
+	line-height: 24px;
+	overflow: hidden;
+	margin-bottom: 26px;
+}
+
+.g-column .cont a{
+	font-size: 14px;
+	color: #39a030;
+	line-height: 24px;
+}
+
+.g-column .cont a:hover{
+	text-decoration: underline;
+}
+/*  column  END  */
+
+
+/*  ppt  */
+.g-ppt{
+	width: 1616px;
+	margin: 0 auto 82px;
+	font-size: 0;
+}
+
+.g-ppt img{
+	width: 320px;
+	height: 220px;
+	margin-right: 4px;
+}
+
+.g-ppt img:last-child{
+	margin-right: 0;
+}
+
+
+/*  ppt  END  */
+
+
+
+
+
+
+
+
+
+/*  footer  */
+
+.g-footer{
+	background-color: #2c3339;
+	height: 262px;
+}
+
+.g-footer .address{
+	width: 393px;
+	height: 88px;
+	margin: 92px 150px 82px 50px;
+}
+
+.g-footer .footer-logo{
+	width: 234px;
+	height: 22px;
+	margin-bottom: 27px;
+}
+
+.g-footer .address p{
+	font-size: 13px;
+	color: rgba(255,255,255,.6);
+	line-height: 25px;
+}
+
+
+
+.g-footer .list{
+	width: 612px;
+}
+
+.g-footer .fore{
+	float: left;
+	margin:82px 0 78px 0;
+
+}
+
+.g-footer .fore-w1{
+	width: 210px;
+}
+
+.g-footer .fore-w2{
+	width: 134px;
+}
+
+.g-footer .fore-w3{
+	width: 254px;
+}
+
+.g-footer .fore dt{
+	font-size: 13px;
+	margin-bottom: 14px;
+}
+
+.g-footer .fore a{
+	display: inline-block;
+	font-size: 15px;
+	
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;	
+}
+
+.g-footer .fore a:hover{
+	text-decoration: underline;
+}
+
+.g-footer .fore dd{
+	line-height: 30px;
+}
+
+.g-footer .fore dt,.g-footer .fore a{
+	color:rgba(255,255,255,.6); 
+	height: 16px;
+	line-height: 16px;
+}
+
+
+.g-footer .fore .f-span{
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	margin-left: 10px;
+	background-position: -86px 0;
+}
+
+
+/*  footer  END  */
+
+
+/*  遮罩层  */
+.m-mask{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.8);	
+
+}
+/*  遮罩层 END  */
+
+
+
+/*  弹出层视频  */
+
+.m-logoVideo{	
+	position: fixed;
+	z-index: 1000;
+	top: 50%;
+	left: 50%;
+	margin-top: -328px;
+	margin-left: -475px;
+
+	width: 950px;
+	height: 676px;
+	background-color: #fff;	
+}
+
+.m-logoVideo .m-videoTitle{
+	width: 148px;
+	height: 28px;
+	margin:24px 0 16px 30px;
+}
+
+.m-logoVideo .m-videoTitle h2,.m-logoForm .formTitle h2{
+	font-size: 18px;
+	line-height: 28px;
+	color: #444;
+}
+
+.m-logoVideo .m-closed,.m-logoForm .m-closed{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 12px;
+	right: 13px;
+	background-position: -108px 0;
+}
+
+.m-logoVideo .m-videoCont{
+	width: 889px;
+	height: 567px;
+	margin: 0 0 40px 30px;
+}
+/*  弹出层视频  END  */
+
+
+
+
+/*  登录框  */
+.m-logoForm{
+	position: fixed;
+	z-index: 1000;
+	top: 50%;
+	left: 50%;
+	margin-top: -193px;
+	margin-left: -144px;
+
+	width: 387px;
+	height: 288px;
+	background-color: #fff;	
+}
+
+.m-logoForm .shifting{
+	top: 8px;
+	right: 10px;
+}
+
+.m-logoForm .formTitle{
+	width: 129px;
+	height: 28px;
+	margin:25px 0 15px 39px;
+	overflow: hidden;
+}
+
+.m-logoForm .m-position{
+	width: 295px;
+	height: 182px;
+	padding-left: 1px;
+	margin-left: 39px;
+}
+
+.m-logoForm .m-input{
+	position: relative;
+	width: 295px;
+	height: 45px;
+	margin-top: 15px;
+}
+
+.m-logoForm .m-input label{
+	position: absolute;
+	top: 11px;
+	left: 14px;
+
+	line-height: 28px;
+	background: #fafafa;
+	font-size: 16px;
+	color: #ccc;
+	cursor: text;
+}
+.m-logoForm .m-input input{	
+	width: 295px;
+	height: 45px;
+	background: #fafafa;
+	border: 1px solid #dfdfdf;
+	box-shadow: 2px 2px 0 #f1f1f1 inset;
+}
+
+.m-logoForm .btn{
+	position: relative;
+	width: 293px;
+	height: 46px;
+	margin-top: 29px;
+}
+
+.m-logoForm .btn input{
+	display: block;
+	width: 293px;
+	height: 46px;
+	background-position: 0 -154px; 
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	font-family: "Microsoft Yahei";
+
+}
+
+.m-logoForm .btn-bg{
+	position: absolute;
+	z-index: -1;
+	top: 1px;
+	left: 1px;
+	width: 295px;
+	height: 47px;
+	background: #d5e3da;
+}
+/*  登录框  END  */
