@@ -2,7 +2,7 @@ html,body{
 	height: 100%;
 }
 
-.g-top .closed:before,.g-header .collect,.g-header .right,.g-header .hasCol,.g-header .nav .last a,.g-column .course-gb1,.g-column .course-gb2,.g-column .course-gb3,.g-footer .fore .f-span,.m-closed,.m-logoForm .btn input{
+.g-top .closed:before,.g-header .collect,.g-header .right,.g-header .hasCol,.g-header .nav .last a,.g-column .course-gb1,.g-column .course-gb2,.g-column .course-gb3,.g-footer .fore .f-span,.m-closed,.m-logoForm .btn input,.g-main .vplay,.g-main .hot-cont .hot-span{
 	background:url("../img/sprite.png") no-repeat -99999px -99999px;
 }
 
@@ -227,7 +227,7 @@ html,body{
 	margin-left: 4px;
 }
 
-.g-column .g-course:last-child{
+.g-column .g-last{
 	margin-right: 0;
 }
 
@@ -278,8 +278,10 @@ html,body{
 /*  ppt  */
 .g-ppt{
 	width: 1616px;
-	margin: 0 auto 82px;
+	margin: 0 auto;
 	font-size: 0;
+	padding-bottom: 82px;
+	background-color: #f8f8f8;
 }
 
 .g-ppt img{
@@ -288,9 +290,10 @@ html,body{
 	margin-right: 4px;
 }
 
-.g-ppt img:last-child{
+.g-ppt .g-last{
 	margin-right: 0;
 }
+
 
 
 /*  ppt  END  */
@@ -298,6 +301,193 @@ html,body{
 
 
 
+
+/*  main  */
+
+.g-main{
+	height: 1470px;
+	background-color: #f8f8f8;
+	overflow: hidden;
+}
+
+/*  左半边内容区域  */
+
+.g-main .m-course{
+	width: 960px;
+}
+
+.g-main .m-course-cont{
+	width: 960px;
+	margin-top: 29px;
+	overflow: hidden;
+}
+
+.g-main .m-container{
+	margin-left: -20px;
+}
+
+.g-main .m-course-tab{
+	display: inline-block;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 0 #ecebeb;
+}
+
+.g-main .m-course-tab a{
+	display: inline-block;
+	width: 200px;
+	height: 50px;
+
+	color: #666;
+	background-color: #fff;
+
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	
+}
+
+.g-main .m-course-tab .present{
+	color: #fff;
+	background-color: #39a030;
+}
+
+.g-main .m-wares{
+	
+	width: 225px;
+	height: 227px;
+	margin-left: 20px;
+	background-color: #fff;
+}
+
+.g-main .m-imgs{
+	width: 223px;
+	height: 124px;
+	margin: 0 1px;
+}
+
+
+/*  左半边内容区域  END  */
+
+
+/*  右边内容区域  */
+
+.g-main .g-more{
+	width: 225px;
+
+}
+
+.g-main .g-video{
+	width: 223px;
+	height: 229px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 0 #ecebeb;
+}
+
+.g-main .g-title{
+	width: 225px;
+	height: 56px;
+	border-bottom: 1px solid #ddd;
+	
+}
+
+.g-main .g-title h3{
+	font-size: 16px;
+	line-height: 22px;
+	color: #333;
+	padding: 17px 0 17px 20px;
+
+}
+
+.g-main .g-vid{
+	width: 223px;
+	height: 172px;
+
+}
+
+.g-main .g-vid p{
+	font-size: 14px;
+	line-height: 22px;
+	color: #666;
+	padding: 19px 0 7px 22px;
+}
+
+.g-main .g-play{
+	margin-left: 22px;
+	position: relative;
+}
+
+.g-main .g-play img{
+	width: 180px;
+	height: 110px;
+}
+
+.g-main .vplay{
+	display: inline-block;
+	position: absolute;
+	top: 32px;
+	left: 66px;
+
+	width: 46px;
+	height: 46px;
+	background-position: -132px 0;
+}
+
+
+.g-main .g-rank{
+	margin-top: 20px;
+	width: 223px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 0 #ecebeb;
+}
+
+.g-main .hot-list{
+	margin:18px 0 20px;
+
+}
+
+.g-main .hot-img{
+	width: 50px;
+	height: 50px;
+	margin-left: 20px;
+	margin-right: 12px;
+}
+
+
+.g-main .hot-cont{
+	width: 126px;
+}
+
+.g-main .hot-cont h3{
+	font-size: 14px;
+	line-height: 17px;
+	color: #333;
+
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+
+.g-main .hot-cont p{
+	font-size:10px;
+	margin-top: 12px;
+}
+
+.g-main .hot-cont .hot-span{
+	display: inline-block;
+	width: 9px;
+	height: 10px;
+	background-position: -76px 0;
+}
+
+.g-main .hot-cont .num{
+	padding-left: 6px;
+}
+/*  右边内容区域  END  */
+
+
+/*  main  END  */
 
 
 
@@ -376,6 +566,7 @@ html,body{
 
 .g-footer .fore dt,.g-footer .fore a{
 	color:rgba(255,255,255,.6); 
+	color: #bebfc0\9;
 	height: 16px;
 	line-height: 16px;
 }
