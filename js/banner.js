@@ -16,13 +16,12 @@ var bannerMod = (function(){
         	this.now = 0;
         	this.$Event = APP.utils.Event;
         	this.setIntervalID = null;
-        	
 		},
 
 		bind:function(){
 
 			var me = this;
-			//var index = me.lis[i].index;
+			
 
 			for(var i = 0; i< this.aPics.length; i++){
 
@@ -33,6 +32,16 @@ var bannerMod = (function(){
 				this.$Event.on(this.aPics[i],'mouseout',function(){
 					me.autoPlay();
 				});
+			}
+
+			for(var i=0; i<me.lis.length; i++){
+
+				this.lis[i].index = i;
+
+				this.$Event.on(this.lis[i],'click',function(){	
+					me.now = this.index;
+			        me.change();
+				})
 			}
 
 		},
@@ -49,15 +58,22 @@ var bannerMod = (function(){
 			            me.now = 0;
 			        }
 
-			    	for(var i = 0; i < me.lis.length; i++){
-			    		me.lis[i].className = '';
-			    		me.aPics[i].style.opacity = 0;
-			    	}
-			    		
-			    	me.lis[me.now].className = 'cur';
-			    	
-			    	animate(me.aPics[me.now],{zIndex:2,opacity:1},500);
+			        me.change();
 			} , 5000 );
+		},
+
+		change:function(){
+
+			var me = this;
+
+	    	for(var i = 0; i < me.lis.length; i++){
+	    		me.lis[i].className = '';
+	    		me.aPics[i].style.opacity = 0;
+	    	}
+	    		
+	    	me.lis[me.now].className = 'cur';
+	    	
+	    	animate(me.aPics[me.now],{zIndex:2,opacity:1},500);
 		}
 
 

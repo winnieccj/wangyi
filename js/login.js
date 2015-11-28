@@ -14,6 +14,11 @@ var loginMod = (function(){
 			this.logoForm = document.querySelector('.m-logoForm');
 			this.collect = document.querySelector('.collect');
 			this.hasCol = document.querySelector('.hasCol');
+
+			this.account = document.querySelector('#account');
+			this.pwd = document.querySelector('#pwd');
+			this.labels = document.querySelectorAll('.m-position label');
+
 			this.mask = null;
 			this.$Cookie = APP.utils.Cookie;
 			this.$Event = APP.utils.Event;
@@ -50,6 +55,33 @@ var loginMod = (function(){
 				}
 				e.stopPropagation();
 			});
+
+			this.$Event.on(this.account,'focus',function(){
+				this.labels[0].style.display = 'none';
+			});
+
+			this.$Event.on(this.pwd,'focus',function(){
+				this.labels[0].style.display = 'none';
+			});
+
+			this.$Event.on(this.account,'blur',function(){
+				if(this.value.length === 0){
+					this.labels[0].style.display = 'block';
+				}else{
+					this.labels[0].style.display = 'none';
+				}
+				
+			});
+
+			this.$Event.on(this.pwd,'blur',function(){
+				if(this.value.length === 0){
+					this.labels[0].style.display = 'block';
+				}else{
+					this.labels[0].style.display = 'none';
+				}
+			});
+
+
 		},
 
 
