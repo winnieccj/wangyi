@@ -2,23 +2,19 @@ var tabMod = (function(pageMod){
 	return {
 		init:function(){
 			this.readerUI();
-			this.bind();
 			this.goPage(1);
-
-			//this.getPageNum(1);
-
+			this.bind();
 		},
 		readerUI:function(){
 			this.tab = document.querySelector('.m-course-tab');
 			this.present = document.querySelector('.present');
 			this.couCont = document.querySelector('.m-course-cont');
 			this.mParent = document.querySelector('.m-parent');
-			this.mWares = document.querySelector('.m-wares');
 			this.$Event = APP.utils.Event;
 			this.pageDiv = null;
 			this.type = 10;
 			this.pageDiv = document.querySelector('.page');
-
+			this.showDiv = null;
 
 		},
 		siblings:function(ele){
@@ -41,6 +37,28 @@ var tabMod = (function(pageMod){
 			}
 			return _res;
 		},
+
+		getPos:function(ele){
+
+		    var left = 0;
+		    var top = 0;
+
+		    left += ele.offsetLeft;
+		    top += ele.offsetTop;
+		    ele = ele.offsetParent;
+
+		    while(ele){
+		    	
+		        left += ele.offsetLeft  - ele.scrollLeft + ele.clientLeft;
+		        top  += ele.offsetTop - ele.scrollTop + ele.clientTop;
+		        ele = ele.offsetParent;
+		    }
+
+		    return {
+		        top:  top,
+		        left: left
+		    }
+		},
 		bind:function(){
 			var me = this;
 
@@ -57,9 +75,7 @@ var tabMod = (function(pageMod){
 					me.type = target.getAttribute('data-type');
 					me.goPage(1);
 				}	
-
 			});
-
 			
 		},
 
@@ -113,9 +129,11 @@ var tabMod = (function(pageMod){
 		getData: function(data){	
 			var data = JSON.parse(data);
 			this.appendHTML(data);
-			
 		},
 
+		sb:function(str){
+			return str.substring(0,60) + '...';
+		},
 
 		appendHTML: function(data){
 			
@@ -124,12 +142,15 @@ var tabMod = (function(pageMod){
 
 			for(var i in data.list){
 				
-				res += '<div class="m-wares" data-name="' + data.list[i].name + '" data-description="' + data.list[i].description + '"><div class="m-wrap"><div class="m-imgs"><img src="'+ data.list[i].middlePhotoUrl +'" alt="img"/></div></div><div class="tit"><h3 class="thide">'+ data.list[i].name +'</h3></div><div class="source">音频帮</div><div class="thumb"><div class="desc"><span class="hot">'+ data.list[i].learnerCount +'</span></div><div class="money"><span class="normal">'+ (data.list[i].price == 0 ? "免费" : "¥" + data.list[i].price ) +'</span></div></div></div>';
+				res += '<div class="m-wares"><div class="m-wrap"><div class="m-imgs"><img src="'+ data.list[i].middlePhotoUrl +'"/></div></div><div class="tit"><h3 class="thide">'+ data.list[i].name +'</h3></div><div class="source">音频帮</div><div class="thumb"><div class="desc"><span class="hot">'+ data.list[i].learnerCount +'</span></div><div class="money"><span class="normal">'+ (data.list[i].price == 0 ? "免费" : "¥" + data.list[i].price ) +'</span></div></div><div class="m-cur clearfix"><div class="m-cur-cont clearfix"><div class="m-pics fl"><img src="'+ data.list[i].middlePhotoUrl +'"/></div><div class="m-menu fl"><h2>'+ data.list[i].name +'</h2><p class="m-menu-f"><span></span>'+ data.list[i].learnerCount +'人在学</p><p>发布者：<span>'+ data.list[i].provider +'</span></p><p>分类：<span>'+ data.list[i].categoryName +'</span></p></div></div><div class="m-words"><p>' + this.sb(data.list[i].description) +'</p></div></div></div>';
 
 			}
 
 			this.mParent.innerHTML = res;
+
 		}
+
+
 
 	}
 })(pageMod);
